@@ -18,7 +18,6 @@ CautisCloud is a secure and distributed cloud storage solution that enhances dat
 Before installing the project, ensure you have the following installed:
 
 - **Python 3.10+**
-- **MongoDB** (Ensure MongoDB is running locally)
 - **Node.js & npm** (For frontend dependencies)
 - **Git** (For version control)
 
