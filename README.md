@@ -11,7 +11,6 @@ CautisCloud is a secure and distributed cloud storage solution that enhances dat
 - **Node-Based Distribution**: Files are split into chunks and distributed across different storage nodes.
 - **Metadata Steganography**: File metadata is embedded into images to enhance security.
 - **Secure Encryption**: File chunks and metadata are encrypted for additional protection.
-- **Professional UI**: Google Cloud-inspired user interface.
 
 ## Prerequisites
 
