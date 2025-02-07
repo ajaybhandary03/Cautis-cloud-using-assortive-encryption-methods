@@ -1,85 +1,78 @@
-SecureCloud: A cautis File Storage System
-SecureCloud is a cautis file storage system that allows users to securely upload, encrypt, and store their files. The system uses a node-splitting mechanism to distribute files across a simulated decentralized network, leveraging IPFS (InterPlanetary File System) for efficient and distributed storage.
+# CautisCloud - Secure Distributed Cloud Storage
 
-Features
-File Upload: Users can upload files through a user-friendly interface.
-Encryption: Uploaded files are encrypted for secure storage.
-Node Splitting: Files are split into chunks, mimicking decentralized storage.
-IPFS Integration: File chunks are stored and retrieved from IPFS for efficient and distributed access.
-File Retrieval: Users can retrieve files using a unique file hash, ensuring secure access.
-Requirements
-To run this project, you need the following installed on your system:
+## Overview
 
-Python (version 3.8 or later)
-Node.js (for IPFS and frontend)
-Flask (Python backend framework)
-IPFS Daemon (IPFS CLI or API setup)
-Setup Instructions
-Follow these steps to set up and run the project on your local machine:
+CautisCloud is a secure and distributed cloud storage solution that enhances data security using metadata-based steganography and node-based file distribution. The project ensures safe storage and retrieval of files by embedding metadata into carrier images and distributing encrypted file chunks across different storage nodes.
 
-Step 1: Clone the Repository
-Clone the project repository from the zip file
+## Features
 
-Step 2: Install Backend Dependencies
-Ensure you have Python installed. Then, install the required Python packages:
+- **User Authentication**: Secure login and registration system.
+- **File Upload & Download**: Users can upload and download files seamlessly.
+- **Node-Based Distribution**: Files are split into chunks and distributed across different storage nodes.
+- **Metadata Steganography**: File metadata is embedded into images to enhance security.
+- **Secure Encryption**: File chunks and metadata are encrypted for additional protection.
+- **Professional UI**: Google Cloud-inspired user interface.
 
-Step 3: Install IPFS
-Download and install IPFS from the official website: IPFS Installation.
-Initialize IPFS on your system:
-bash
-Copy code
-ipfs init
-Start the IPFS daemon:
-bash
-Copy code
-ipfs daemon
-Step 4: Configure MongoDB
+## Prerequisites
 
-Step 5: Run the Backend
-Run the Python Flask backend server:
+Before installing the project, ensure you have the following installed:
 
-bash
-Copy code
-python app.py
-This will start the backend server at http://127.0.0.1:5000.
+- **Python 3.10+**
+- **MongoDB** (Ensure MongoDB is running locally)
+- **Node.js & npm** (For frontend dependencies)
+- **Git** (For version control)
 
-Step 6: Run the Frontend
-The frontend is built with React. Navigate to the frontend directory and install dependencies:
+## Installation
 
-bash
-Copy code
-cd frontend
-npm install
-npm start
-This will start the frontend at http://localhost:3000.
+### **1. Clone the Repository**
 
-How It Works
-User Authentication:
+```sh
+ git clone https://github.com/ajaybhandary03/Cautis-cloud-using-assortive-encryption-methods.git
+ cd Cautis-cloud-using-assortive-encryption-methods
+```
 
-Users can register and log in to the system.
-MongoDB stores user credentials and session data.
-File Upload:
+### **2. Backend Setup**
 
-Users upload files through the web interface.
-Files are encrypted using AES-256 encryption to ensure data security.
-Node Splitting:
+```sh
+ cd backend
+ python -m venv venv
+ source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+ pip install -r requirements.txt
+```
 
-Encrypted files are split into smaller chunks.
-These chunks simulate decentralized storage by being processed independently.
-IPFS Storage:
+### **3. Frontend Setup**
 
-Each chunk is stored on IPFS, and a unique hash is generated.
-The metadata, including hashes, is saved in MongoDB.
-File Retrieval:
+```sh
+ cd ../frontend
+ npm install
+```
 
-Users can retrieve files using the unique file hash.
-The system fetches chunks from IPFS, decrypts, and reassembles the file.
+## Running the Application
 
-Usage
-Upload Files: Navigate to the "Upload" page, select a file, and upload it.
-Download Files: Go to the "Download" page, enter the file hash, and retrieve your file.
-Monitor Storage: Use IPFS to track and manage the distributed file chunks.
-Future Enhancements
-Implement user-specific IPFS nodes for greater decentralization.
-Add more encryption algorithms for enhanced security.
-Improve the UI for better user experience.
+### **1. Start the Backend**
+
+```sh
+ cd backend
+ flask run
+```
+
+### **2. Start the Frontend**
+
+```sh
+ cd frontend
+ npm start
+```
+
+## Usage
+
+1. **Register/Login** to access the platform.
+2. **Upload a File**: The file gets split, encrypted, and stored across distributed nodes.
+3. **Download a File**: The metadata is extracted from the carrier image, and the file is reassembled for secure download.
+
+## Future Enhancements
+
+- **Improved UI & UX**
+- **Advanced Encryption & Hashing Mechanisms**
+- **Integration with Decentralized Storage Networks**
+- **Multi-Factor Authentication for Enhanced Security**
+- **Mobile Application Support**
